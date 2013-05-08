@@ -1,0 +1,11 @@
+[
+{
+  "pk": 1, 
+  "model": "blog.post", 
+  "fields": {
+    "mas": "", 
+    "intro": "Esto es un post de pruebas", 
+    "title": "Post1"
+  }
+}
+]
