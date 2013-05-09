@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<h1>Esta seguro de que quiere borrar</h1>
+<form method="Post">
+    {%  csrf_token %}
+    {{ form }}
+    <button class="submit">Eliminar</button>
+</form>
+</body>
+</html>
