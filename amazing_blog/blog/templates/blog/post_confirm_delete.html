@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+{%  extends "blog/post_list.html" %}
+{%  load bootstrap3 %}
+
+{%  block content %}
 <h1>Esta seguro de que quiere borrar</h1>
 <form method="Post">
     {%  csrf_token %}
-    {{ form }}
+{#    {% bootstrap_form form %}#}
     <button class="submit">Eliminar</button>
 </form>
-</body>
-</html>
+{% endblock %}
