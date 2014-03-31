@@ -11,6 +11,9 @@ def titlebold(value):
 register.filter("titlebold", titlebold)
 
 def actions_menu(context, page):
-    return {'page': page, 'post': context['post']}
+    out_context = {'page': page}
+    if context.has_key("post"):
+        out_context['post'] = context['post']
+    return out_context
 
 register.inclusion_tag("blog/actions.html", takes_context=True)(actions_menu)
