@@ -1,5 +1,6 @@
 {%  extends "blog/post_list.html" %}
 {%  load bootstrap3 %}
+{%  load blog_extras %}
 
 {%  block content %}
 <h1>Esta seguro de que quiere borrar</h1>
@@ -11,4 +12,5 @@
 {% endblock %}
 
 {% block actions %}
+    {% actions_menu "delete" %}
 {%  endblock %}

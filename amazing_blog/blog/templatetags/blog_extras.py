@@ -9,3 +9,8 @@ def titlebold(value):
     return mark_safe("<strong>%s</strong>" % value)
 
 register.filter("titlebold", titlebold)
+
+def actions_menu(context, page):
+    return {'page': page, 'post': context['post']}
+
+register.inclusion_tag("blog/actions.html", takes_context=True)(actions_menu)

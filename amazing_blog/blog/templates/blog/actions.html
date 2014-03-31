@@ -1,0 +1,14 @@
+{% ifequal page "details" %}
+    <li><a href="{% url "post_update" post.id %}">Editar post</a></li>
+    <li><a href="{% url "post_delete" post.id %}">Eliminar post</a></li>
+{%  endifequal %}
+
+{% ifequal page "delete" %}
+{%  endifequal %}
+
+{% ifequal page "form" %}
+{%  endifequal %}
+
+{% ifequal page "list" %}
+    <li><a href="{%  url "post_create" %}">Nuevo post</a></li>
+{%  endifequal %}

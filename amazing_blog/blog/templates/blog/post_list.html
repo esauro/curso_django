@@ -22,7 +22,7 @@
     <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
             {%  block actions %}
-                <li><a href="{%  url "post_create" %}">Nuevo post</a></li>
+                {% actions_menu "list" %}
             {% endblock %}
         </ul>
         </div>
