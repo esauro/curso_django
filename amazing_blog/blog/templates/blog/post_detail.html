@@ -1,7 +1,8 @@
 {%  extends "blog/post_list.html" %}
+{%  load blog_extras %}
 
 {%  block content %}
-        <h1>{{ post.title }}</h1>
+        <h1>{{ post.title|titlebold }}</h1>
         <p>{{ post.intro }}</p>
         <p>{{ post.mas }}</p>
 {%  endblock %}
