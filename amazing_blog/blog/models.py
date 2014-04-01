@@ -18,3 +18,7 @@ class Post(models.Model):
 class Comment(models.Model):
     post = models.ForeignKey(Post)
     comment = models.TextField()
+
+class Visits(models.Model):
+    post = models.ForeignKey(Post)
+    visitas = models.IntegerField(default=0)
