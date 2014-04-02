@@ -1,3 +1,4 @@
+from django.contrib.auth.models import AbstractUser
 from django.core.urlresolvers import reverse
 from django.db import models
 
@@ -19,6 +20,12 @@ class Comment(models.Model):
     post = models.ForeignKey(Post)
     comment = models.TextField()
 
+
 class Visits(models.Model):
     post = models.ForeignKey(Post)
     visitas = models.IntegerField(default=0)
+
+
+class CustomUser(AbstractUser):
+    birth_date = models.DateField(null=True)
+    height = models.IntegerField(null=True)

@@ -169,3 +169,5 @@ TEMPLATE_CONTEXT_PROCESSORS =  ("blog.context_processors.page",
                                 "django.contrib.messages.context_processors.messages")
 
 AUTHENTICATION_BACKENDS = ('blog.backends.HardcodedBackend', 'django.contrib.auth.backends.ModelBackend',)
+
+AUTH_USER_MODEL = "blog.CustomUser"
