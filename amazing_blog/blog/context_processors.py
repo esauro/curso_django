@@ -9,4 +9,6 @@ def page(request):
         context['page'] = "delete"
     if request.path.endswith(u"/edit"):
         context['page'] = "form"
+    if request.path.endswith(u"/create"):
+        context['page'] = "empty"
     return context
